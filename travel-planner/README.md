@@ -5,7 +5,7 @@ GitHub Pages 업로드용 폴더 구조입니다.
 ## 구조
 
 ```text
-travel-planner/
+Repository
 ├── index.html
 └── trips/
     └── jeju-family/
