@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Moon Family Travel</title>
+  <style>
+    :root{
+      --bg:#f5f5f7;--card:#ffffff;--text:#1d1d1f;--sub:#6e6e73;--blue:#007aff;--green:#34c759;--orange:#ff9500;--pink:#ff2d55;
+      --shadow:0 18px 50px rgba(0,0,0,.10);--soft:0 8px 24px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:linear-gradient(180deg,#eef7ff 0%,#f5f5f7 42%,#f5f5f7 100%);color:var(--text);}
+    .phone{max-width:430px;margin:0 auto;min-height:100svh;padding:18px 18px 92px;position:relative;}
+    .status{height:34px;display:flex;align-items:center;justify-content:space-between;color:#111;font-weight:700;font-size:14px;padding:0 8px;opacity:.85}
+    .top{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+    .hello .eyebrow{color:var(--sub);font-size:15px;font-weight:600}.hello h1{font-size:34px;line-height:1.02;margin:4px 0 0;letter-spacing:-.9px}.avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#fff,#d9ecff);box-shadow:var(--soft);display:grid;place-items:center;font-size:24px;border:1px solid rgba(255,255,255,.8)}
+    .hero{margin-top:22px;border-radius:34px;min-height:260px;padding:22px;position:relative;overflow:hidden;color:white;box-shadow:var(--shadow);background:radial-gradient(circle at 20% 18%,rgba(255,255,255,.55),transparent 22%),linear-gradient(135deg,#22c1c3 0%,#2f80ed 48%,#0b1f52 100%)}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.42));z-index:0}.hero:after{content:"🏝️";position:absolute;font-size:122px;right:-12px;bottom:6px;filter:drop-shadow(0 14px 20px rgba(0,0,0,.25));opacity:.95}.hero>*{position:relative;z-index:1}.pill{display:inline-flex;gap:7px;align-items:center;background:rgba(255,255,255,.22);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:8px 12px;font-size:13px;font-weight:700}.hero h2{font-size:36px;line-height:1.03;margin:52px 0 8px;letter-spacing:-1.1px}.hero p{margin:0;color:rgba(255,255,255,.86);font-size:15px;font-weight:600}.heroActions{display:flex;gap:10px;margin-top:18px}.btn{border:0;text-decoration:none;border-radius:999px;padding:12px 16px;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center;gap:6px}.btn.primary{background:white;color:#0a63ce}.btn.glass{background:rgba(255,255,255,.18);color:white;border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(16px)}
+    .section{margin-top:28px}.sectionHeader{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}.section h3{margin:0;font-size:22px;letter-spacing:-.4px}.sectionHeader a{color:var(--blue);text-decoration:none;font-size:14px;font-weight:700}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{background:rgba(255,255,255,.75);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.9);border-radius:24px;padding:16px;box-shadow:var(--soft);min-height:112px}.mini .icon{font-size:25px}.mini .label{margin-top:12px;color:var(--sub);font-size:13px;font-weight:700}.mini .value{font-size:20px;font-weight:850;letter-spacing:-.5px;margin-top:3px}.tripList{display:flex;flex-direction:column;gap:12px}.trip{display:flex;align-items:center;gap:14px;background:var(--card);border-radius:24px;padding:14px;box-shadow:var(--soft);text-decoration:none;color:inherit}.thumb{width:66px;height:66px;border-radius:20px;display:grid;place-items:center;font-size:34px;background:linear-gradient(135deg,#e0f7ff,#fff3d6)}.tripInfo{flex:1}.tripTitle{font-size:18px;font-weight:850}.tripMeta{font-size:13px;color:var(--sub);font-weight:650;margin-top:4px}.arrow{color:#c7c7cc;font-size:24px;font-weight:900}.timeline{background:var(--card);border-radius:28px;padding:8px 18px;box-shadow:var(--soft)}.day{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid #efeff4}.day:last-child{border-bottom:0}.dot{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#f2f7ff}.dayText b{display:block;font-size:15px}.dayText span{font-size:13px;color:var(--sub);font-weight:650}.family{display:flex;gap:9px}.person{flex:1;background:var(--card);border-radius:20px;padding:13px 6px;text-align:center;box-shadow:var(--soft)}.person .face{font-size:25px}.person .name{font-size:12px;font-weight:800;margin-top:5px;color:#3a3a3c}.tabbar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);width:min(392px,calc(100% - 32px));height:70px;border-radius:28px;background:rgba(255,255,255,.82);backdrop-filter:blur(24px);box-shadow:0 12px 38px rgba(0,0,0,.18);display:grid;grid-template-columns:repeat(4,1fr);align-items:center;border:1px solid rgba(255,255,255,.9)}.tab{text-align:center;font-size:11px;color:#8e8e93;font-weight:800;text-decoration:none}.tab .ico{display:block;font-size:22px;margin-bottom:2px}.tab.active{color:var(--blue)}
+    @media (min-width:700px){body{background:#e9f2fb}.phone{margin-top:24px;margin-bottom:24px;border-radius:42px;background:linear-gradient(180deg,#eef7ff 0%,#f5f5f7 42%,#f5f5f7 100%);box-shadow:0 30px 80px rgba(0,0,0,.16)}}
+  </style>
+</head>
+<body>
+  <main class="phone">
+    <div class="status"><span>9:41</span><span>●●● 5G 🔋</span></div>
+    <header class="top">
+      <div class="hello">
+        <div class="eyebrow">Good day, Moon Family 👋</div>
+        <h1>Family<br>Travel</h1>
+      </div>
+      <div class="avatar">👨‍👩‍👧‍👦</div>
+    </header>
+
+    <section class="hero">
+      <div class="pill">현재 여행 · 3박 4일</div>
+      <h2>제주<br>가족여행</h2>
+      <p>표선 해수욕장 근처 · 4개월 아기와 5살 아이 맞춤 일정</p>
+      <div class="heroActions">
+        <a class="btn primary" href="./trips/jeju-family/">여행 보기 →</a>
+        <a class="btn glass" href="https://map.naver.com/p/search/표선해수욕장" target="_blank" rel="noopener">지도</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHeader"><h3>Trip Summary</h3></div>
+      <div class="grid">
+        <div class="mini"><div class="icon">📅</div><div class="label">일정</div><div class="value">6.18–6.21</div></div>
+        <div class="mini"><div class="icon">🏠</div><div class="label">숙소</div><div class="value">표선</div></div>
+        <div class="mini"><div class="icon">👶</div><div class="label">아이</div><div class="value">2명</div></div>
+        <div class="mini"><div class="icon">🚗</div><div class="label">스타일</div><div class="value">느긋하게</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHeader"><h3>My Trips</h3><a href="./trips/jeju-family/">전체보기</a></div>
+      <div class="tripList">
+        <a class="trip" href="./trips/jeju-family/">
+          <div class="thumb">🏝️</div>
+          <div class="tripInfo"><div class="tripTitle">제주 가족여행</div><div class="tripMeta">표선 · 아쿠아플라넷 · 사려니숲길</div></div><div class="arrow">›</div>
+        </a>
+        <div class="trip" style="opacity:.62">
+          <div class="thumb" style="background:linear-gradient(135deg,#f2f2f7,#fff)">➕</div>
+          <div class="tripInfo"><div class="tripTitle">다음 여행 추가</div><div class="tripMeta">오사카, 대만, 부산, 캠핑 등</div></div><div class="arrow">›</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHeader"><h3>Daily Flow</h3></div>
+      <div class="timeline">
+        <div class="day"><div class="dot">✈️</div><div class="dayText"><b>Day 1 · 제주 도착</b><span>렌터카 · 체크인 · 표선 산책</span></div></div>
+        <div class="day"><div class="dot">🐠</div><div class="dayText"><b>Day 2 · 성산 코스</b><span>아쿠아플라넷 · 섭지코지</span></div></div>
+        <div class="day"><div class="dot">🌲</div><div class="dayText"><b>Day 3 · 아이 중심</b><span>제주민속촌 · 사려니숲길</span></div></div>
+        <div class="day"><div class="dot">🛫</div><div class="dayText"><b>Day 4 · 집으로</b><span>체크아웃 · 렌터카 반납 · 출발</span></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHeader"><h3>Family</h3></div>
+      <div class="family">
+        <div class="person"><div class="face">👨</div><div class="name">Dad</div></div>
+        <div class="person"><div class="face">👩</div><div class="name">Mom</div></div>
+        <div class="person"><div class="face">🧒</div><div class="name">5살</div></div>
+        <div class="person"><div class="face">👶</div><div class="name">4개월</div></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <a class="tab active" href="./"><span class="ico">🏠</span>Home</a>
+    <a class="tab" href="./trips/jeju-family/"><span class="ico">🗺️</span>Trips</a>
+    <a class="tab" href="./trips/jeju-family/#checklist"><span class="ico">☑️</span>List</a>
+    <a class="tab" href="./trips/jeju-family/#share"><span class="ico">↗️</span>Share</a>
+  </nav>
+</body>
+</html>
