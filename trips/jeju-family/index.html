@@ -1,146 +1,39 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>제주 가족여행 플랜</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<html lang="ko"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/><title>제주 가족여행 선택형 플랜</title>
 <style>
-:root{
-  --bg:#F4F7FB; --card:#FFFFFF; --ink:#14213D; --sub:#65748B; --muted:#99A4B5;
-  --blue:#1778F2; --cyan:#4CC9F0; --green:#20C997; --orange:#FF9F1C; --pink:#FF6B9A;
-  --shadow:0 18px 45px rgba(20,33,61,.10); --soft:0 8px 22px rgba(20,33,61,.08);
-  --radius:28px;
-}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Pretendard,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;background:radial-gradient(circle at 10% 0%,#DFF6FF 0,#F4F7FB 34%,#F7F8FC 100%);color:var(--ink);padding-bottom:92px}
-a{color:inherit;text-decoration:none}.app{max-width:480px;margin:0 auto;min-height:100vh;position:relative}.hero{padding:18px 18px 12px;position:sticky;top:0;z-index:10;background:linear-gradient(to bottom,rgba(244,247,251,.95),rgba(244,247,251,.74),rgba(244,247,251,0));backdrop-filter:blur(18px)}.status{display:flex;align-items:center;justify-content:space-between;margin:2px 2px 14px;color:#344054;font-size:13px;font-weight:700}.pill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.8);box-shadow:var(--soft);border-radius:999px;padding:9px 12px;font-size:12px;color:#475467}.cover{position:relative;overflow:hidden;border-radius:34px;min-height:245px;padding:24px 20px;color:white;box-shadow:0 24px 60px rgba(23,120,242,.28);background:linear-gradient(145deg,rgba(13,110,253,.95),rgba(76,201,240,.86)),url('https://images.unsplash.com/photo-1605613136001-4d94f1f55619?auto=format&fit=crop&w=1200&q=80') center/cover}.cover:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 10%,rgba(255,255,255,.48),transparent 30%),linear-gradient(to top,rgba(0,0,0,.18),transparent 60%)}.cover>*{position:relative;z-index:1}.cover h1{margin:16px 0 8px;font-size:34px;line-height:1.05;letter-spacing:-.9px}.cover p{margin:0;color:rgba(255,255,255,.9);font-weight:500;line-height:1.45}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}.quick div{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:12px 10px;backdrop-filter:blur(12px)}.quick b{display:block;font-size:17px}.quick span{font-size:11px;color:rgba(255,255,255,.82)}.section{padding:12px 18px}.section-title{display:flex;justify-content:space-between;align-items:flex-end;margin:8px 2px 12px}.section-title h2{font-size:24px;margin:0;letter-spacing:-.5px}.section-title span{font-size:13px;color:var(--sub);font-weight:600}.weather{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.weather .w{background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.9);border-radius:22px;padding:13px 8px;text-align:center;box-shadow:var(--soft)}.w .d{font-size:12px;color:var(--sub);font-weight:700}.w .i{font-size:24px;margin:8px 0}.w .t{font-weight:800}.notice{display:flex;gap:12px;align-items:flex-start;background:#FFF7E8;border:1px solid #FFE3B3;border-radius:22px;padding:14px;margin-top:12px;color:#6B4B00}.notice b{display:block;color:#4B3500}.tabs{display:flex;gap:9px;overflow-x:auto;padding:4px 18px 12px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{flex:0 0 auto;background:#fff;border:1px solid rgba(20,33,61,.06);box-shadow:var(--soft);border-radius:999px;padding:11px 15px;font-weight:800;font-size:13px}.tab.active{background:var(--ink);color:white}.day-card{background:rgba(255,255,255,.86);border:1px solid rgba(255,255,255,.9);border-radius:var(--radius);padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}.day-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.day-head h3{margin:0;font-size:21px;letter-spacing:-.4px}.badge{background:#EEF6FF;color:#1769D1;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800}.route{display:flex;align-items:center;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:12px}.route span{white-space:nowrap;background:#F1F5F9;color:#475467;border-radius:999px;padding:8px 11px;font-size:12px;font-weight:700}.timeline{position:relative;margin-top:10px}.item{display:grid;grid-template-columns:58px 1fr;gap:12px;position:relative}.item:not(:last-child){padding-bottom:18px}.item:not(:last-child):after{content:"";position:absolute;left:67px;top:36px;bottom:4px;width:2px;background:#E7EEF7}.time{font-weight:900;color:var(--blue);font-size:13px;padding-top:3px}.place{background:#F8FAFC;border-radius:22px;padding:14px;position:relative}.place h4{margin:0 0 5px;font-size:16px}.place p{margin:0;color:var(--sub);font-size:13px;line-height:1.45}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{font-size:11px;font-weight:800;padding:6px 8px;border-radius:999px;background:white;color:#516071;border:1px solid #E6ECF3}.btns{display:flex;gap:8px;margin-top:12px}.btn{flex:1;text-align:center;padding:11px 10px;border-radius:16px;font-size:13px;font-weight:900;background:#EAF3FF;color:#1368D6}.btn.primary{background:var(--blue);color:white}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{background:white;border-radius:24px;padding:15px;box-shadow:var(--soft);border:1px solid rgba(20,33,61,.05)}.mini .emoji{font-size:28px}.mini b{display:block;margin-top:8px}.mini span{font-size:12px;color:var(--sub);line-height:1.4}.checklist{background:rgba(255,255,255,.86);border-radius:var(--radius);box-shadow:var(--shadow);padding:10px 14px;border:1px solid white}.check{display:flex;align-items:center;gap:12px;padding:14px 4px;border-bottom:1px solid #EEF2F7}.check:last-child{border-bottom:0}.check input{width:22px;height:22px;accent-color:var(--blue)}.check label{font-weight:700}.bottom-nav{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);width:min(444px,calc(100% - 28px));background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 50px rgba(20,33,61,.18);backdrop-filter:blur(24px);border-radius:28px;padding:9px;display:grid;grid-template-columns:repeat(4,1fr);z-index:20}.bottom-nav a{text-align:center;border-radius:20px;padding:9px 4px;color:#6B778C;font-size:11px;font-weight:800}.bottom-nav a b{display:block;font-size:19px;margin-bottom:2px}.bottom-nav a.on{background:#EEF6FF;color:#1769D1}.floating{position:fixed;right:20px;bottom:95px;background:#111827;color:#fff;border-radius:999px;padding:13px 16px;font-weight:900;box-shadow:0 18px 40px rgba(0,0,0,.22);z-index:21}.footer{text-align:center;color:#98A2B3;font-size:12px;padding:20px 18px 38px}.family-note{background:linear-gradient(135deg,#FFF,#F1F8FF);border-radius:28px;padding:18px;box-shadow:var(--shadow);border:1px solid white}.family-note h3{margin:0 0 8px}.family-note p{margin:0;color:var(--sub);line-height:1.55;font-size:14px}@media (min-width:700px){body{background:#EAF0F8}.app{box-shadow:0 0 0 1px rgba(20,33,61,.06),0 30px 80px rgba(20,33,61,.14);background:var(--bg)}}
-</style>
-</head>
-<body>
-<div class="app">
-  <header class="hero" id="home">
-    <div class="status"><span>제주 가족여행</span><span>3박 4일</span></div>
-    <div class="cover">
-      <div class="pill">👶 4개월 아기 · 🧒 5살 아이 맞춤</div>
-      <h1>표선에서<br>천천히 쉬는 제주</h1>
-      <p>내일 13:30 제주 도착 · 일요일 11:00 출발<br>숙소는 표선해수욕장 근처</p>
-      <div class="quick">
-        <div><b>동쪽</b><span>이동 최소화</span></div>
-        <div><b>2~3곳</b><span>하루 방문</span></div>
-        <div><b>낮잠</b><span>매일 확보</span></div>
-      </div>
-    </div>
-  </header>
-
-  <section class="section" id="summary">
-    <div class="section-title"><h2>오늘의 핵심</h2><span>부모 체력 우선</span></div>
-    <div class="grid2">
-      <div class="mini"><div class="emoji">🚗</div><b>장거리 금지</b><span>표선·성산 중심으로 30분 내 이동</span></div>
-      <div class="mini"><div class="emoji">🍼</div><b>수유/낮잠</b><span>오후 4시 전후 숙소 복귀 권장</span></div>
-      <div class="mini"><div class="emoji">🏖️</div><b>해변 산책</b><span>표선해변은 얕고 넓어 아이에게 좋음</span></div>
-      <div class="mini"><div class="emoji">☔</div><b>우천 대안</b><span>아쿠아플라넷·제주민속촌 위주</span></div>
-    </div>
-    <div class="notice"><div>⚠️</div><div><b>이번 여행에서 빼면 좋은 코스</b>우도, 성산일출봉 등반, 중문권 왕복, 한라산은 4개월 아기와 함께하기엔 피로도가 큽니다.</div></div>
-  </section>
-
-  <section class="section" id="weather">
-    <div class="section-title"><h2>날씨 메모</h2><span>현장 확인 필요</span></div>
-    <div class="weather">
-      <div class="w"><div class="d">Day 1</div><div class="i">🌤️</div><div class="t">도착/산책</div></div>
-      <div class="w"><div class="d">Day 2</div><div class="i">🐠</div><div class="t">실내+성산</div></div>
-      <div class="w"><div class="d">Day 3</div><div class="i">🌲</div><div class="t">숲/휴식</div></div>
-      <div class="w"><div class="d">Day 4</div><div class="i">✈️</div><div class="t">공항</div></div>
-    </div>
-  </section>
-
-  <nav class="tabs" id="days">
-    <a class="tab active" href="#day1">Day 1 도착</a><a class="tab" href="#day2">Day 2 성산</a><a class="tab" href="#day3">Day 3 표선</a><a class="tab" href="#day4">Day 4 출발</a>
-  </nav>
-
-  <section class="section">
-    <article class="day-card" id="day1">
-      <div class="day-head"><h3>✈️ Day 1 · 제주 적응</h3><span class="badge">무리 금지</span></div>
-      <div class="route"><span>공항</span><span>→</span><span>점심</span><span>→</span><span>숙소</span><span>→</span><span>표선해변</span></div>
-      <div class="timeline">
-        <div class="item"><div class="time">13:30</div><div class="place"><h4>제주 도착 · 렌터카 수령</h4><p>짐, 카시트, 유모차를 정리하고 바로 동쪽으로 이동.</p><div class="chips"><span class="chip">기저귀 먼저</span><span class="chip">수유 타이밍</span></div></div></div>
-        <div class="item"><div class="time">15:30</div><div class="place"><h4>늦은 점심</h4><p>성산/표선 가는 길에 아이가 먹기 쉬운 국수·전복죽 계열 추천.</p><div class="btns"><a class="btn" href="https://map.naver.com/p/search/%EA%B0%80%EC%8B%9C%EC%95%84%EB%B0%A9%EA%B5%AD%EC%88%98" target="_blank">가시아방국수</a><a class="btn" href="https://map.naver.com/p/search/%EB%AA%85%EC%A7%84%EC%A0%84%EB%B3%B5" target="_blank">명진전복</a></div></div></div>
-        <div class="item"><div class="time">17:00</div><div class="place"><h4>숙소 체크인</h4><p>아기 수유, 짐 정리, 첫날 컨디션 회복.</p></div></div>
-        <div class="item"><div class="time">18:00</div><div class="place"><h4>표선해수욕장 산책</h4><p>모래놀이, 짧은 산책, 사진 찍기. 첫날은 일찍 마무리.</p><div class="btns"><a class="btn primary" href="https://map.naver.com/p/search/%ED%91%9C%EC%84%A0%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" target="_blank">지도 열기</a></div></div></div>
-      </div>
-    </article>
-
-    <article class="day-card" id="day2">
-      <div class="day-head"><h3>🐠 Day 2 · 성산 아이 코스</h3><span class="badge">만족도 최고</span></div>
-      <div class="route"><span>아쿠아플라넷</span><span>→</span><span>점심</span><span>→</span><span>섭지코지</span><span>→</span><span>숙소</span></div>
-      <div class="timeline">
-        <div class="item"><div class="time">09:30</div><div class="place"><h4>아쿠아플라넷 제주</h4><p>실내라 날씨 영향이 적고, 유모차 이동이 쉬워 4개월 아기와 함께하기 좋음.</p><div class="chips"><span class="chip">유모차</span><span class="chip">수유실 확인</span><span class="chip">비 와도 가능</span></div><div class="btns"><a class="btn primary" href="https://map.naver.com/p/search/%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC" target="_blank">지도 열기</a></div></div></div>
-        <div class="item"><div class="time">13:00</div><div class="place"><h4>성산 근처 점심</h4><p>전복죽, 고등어구이, 국수처럼 아이와 나눠 먹기 쉬운 메뉴 추천.</p></div></div>
-        <div class="item"><div class="time">14:00</div><div class="place"><h4>섭지코지 산책</h4><p>전체를 다 돌기보다 입구 쪽에서 바다 보고 40~60분 정도만.</p><div class="btns"><a class="btn primary" href="https://map.naver.com/p/search/%EC%84%AD%EC%A7%80%EC%BD%94%EC%A7%80" target="_blank">지도 열기</a></div></div></div>
-        <div class="item"><div class="time">16:00</div><div class="place"><h4>숙소 복귀 · 낮잠</h4><p>이 타이밍을 지켜야 저녁 컨디션이 무너지지 않음.</p></div></div>
-      </div>
-    </article>
-
-    <article class="day-card" id="day3">
-      <div class="day-head"><h3>🌿 Day 3 · 표선 근처 여유</h3><span class="badge">가까운 코스</span></div>
-      <div class="route"><span>제주민속촌</span><span>→</span><span>점심</span><span>→</span><span>사려니숲길</span><span>→</span><span>카페</span></div>
-      <div class="timeline">
-        <div class="item"><div class="time">09:30</div><div class="place"><h4>제주민속촌</h4><p>숙소와 매우 가까워 부담이 적고, 5살 아이가 뛰어다니기 좋음.</p><div class="btns"><a class="btn primary" href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EB%AF%BC%EC%86%8D%EC%B4%8C" target="_blank">지도 열기</a></div></div></div>
-        <div class="item"><div class="time">13:00</div><div class="place"><h4>표선/성읍리 점심</h4><p>멀리 가지 않고 숙소 반경에서 해결.</p></div></div>
-        <div class="item"><div class="time">14:00</div><div class="place"><h4>사려니숲길</h4><p>그늘이 많아 아기와 걷기 좋지만, 컨디션이 안 좋으면 과감히 생략.</p><div class="chips"><span class="chip">아기띠 추천</span><span class="chip">짧게 걷기</span></div><div class="btns"><a class="btn primary" href="https://map.naver.com/p/search/%EC%82%AC%EB%A0%A4%EB%8B%88%EC%88%B2%EA%B8%B8" target="_blank">지도 열기</a></div></div></div>
-        <div class="item"><div class="time">16:30</div><div class="place"><h4>조용한 카페 또는 숙소 휴식</h4><p>마지막 밤이므로 무리하지 않고 빨리 정리.</p></div></div>
-      </div>
-    </article>
-
-    <article class="day-card" id="day4">
-      <div class="day-head"><h3>🛫 Day 4 · 공항 이동</h3><span class="badge">여유 있게</span></div>
-      <div class="timeline">
-        <div class="item"><div class="time">07:00</div><div class="place"><h4>체크아웃 준비</h4><p>기저귀, 분유, 젖병, 여벌옷은 따로 손가방에.</p></div></div>
-        <div class="item"><div class="time">08:00</div><div class="place"><h4>표선 출발</h4><p>일요일 오전이라 렌터카 반납 시간을 넉넉하게 잡기.</p></div></div>
-        <div class="item"><div class="time">09:20</div><div class="place"><h4>렌터카 반납</h4><p>주유·짐 내리기·셔틀 이동까지 감안.</p></div></div>
-        <div class="item"><div class="time">11:00</div><div class="place"><h4>제주 출발</h4><p>아이들 간식과 물티슈는 탑승 직전까지 꺼내기 쉽게.</p></div></div>
-      </div>
-    </article>
-  </section>
-
-  <section class="section" id="checklist">
-    <div class="section-title"><h2>준비물 체크</h2><span>터치해서 체크</span></div>
-    <div class="checklist">
-      <div class="check"><input type="checkbox" id="c1"><label for="c1">기저귀 · 물티슈 · 방수패드</label></div>
-      <div class="check"><input type="checkbox" id="c2"><label for="c2">분유 · 젖병 · 보온병 · 세척용품</label></div>
-      <div class="check"><input type="checkbox" id="c3"><label for="c3">아기띠 · 유모차 · 카시트 확인</label></div>
-      <div class="check"><input type="checkbox" id="c4"><label for="c4">5살 아이 여벌옷 · 모래놀이 장난감</label></div>
-      <div class="check"><input type="checkbox" id="c5"><label for="c5">상비약 · 체온계 · 선크림 · 모자</label></div>
-      <div class="check"><input type="checkbox" id="c6"><label for="c6">충전기 · 보조배터리 · 가족 신분증</label></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="family-note">
-      <h3>💬 가족 공유 메모</h3>
-      <p>이번 여행은 관광지를 많이 찍는 것보다, 아이들이 덜 힘들고 부모가 덜 지치는 일정이 목표입니다. 하루에 한 번은 꼭 숙소 복귀 시간을 확보하고, 아이 컨디션이 안 좋으면 오후 일정은 과감히 생략해도 됩니다.</p>
-    </div>
-  </section>
-
-  <a class="floating" href="#home">↑ 위로</a>
-  <nav class="bottom-nav">
-    <a class="on" href="#home"><b>🏝️</b>홈</a>
-    <a href="#days"><b>🗓️</b>일정</a>
-    <a href="#weather"><b>🌤️</b>날씨</a>
-    <a href="#checklist"><b>✅</b>준비</a>
-  </nav>
-  <div class="footer">Made for our Jeju family trip · 표선 중심 3박 4일</div>
-</div>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#14213d;--sub:#667085;--blue:#007aff;--green:#34c759;--orange:#ff9500;--pink:#ff2d55;--shadow:0 18px 50px rgba(20,33,61,.10);--soft:0 8px 24px rgba(20,33,61,.08)}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:radial-gradient(circle at 20% 0%,#dff6ff,#f5f7fb 38%);color:var(--ink);padding-bottom:94px}.app{max-width:480px;margin:0 auto;min-height:100vh}.hero{padding:18px;position:sticky;top:0;z-index:10;background:linear-gradient(to bottom,rgba(245,247,251,.96),rgba(245,247,251,.78),rgba(245,247,251,0));backdrop-filter:blur(18px)}.topline{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.back{background:rgba(255,255,255,.82);border:1px solid #fff;box-shadow:var(--soft);border-radius:999px;padding:9px 12px;text-decoration:none;color:inherit;font-weight:850;font-size:13px}.cover{position:relative;overflow:hidden;border-radius:34px;min-height:242px;padding:24px 20px;color:#fff;box-shadow:0 24px 60px rgba(0,122,255,.22);background:radial-gradient(circle at 78% 10%,rgba(255,255,255,.52),transparent 28%),linear-gradient(145deg,#1389f2,#4cc9f0 58%,#1b4965)}.cover h1{font-size:34px;line-height:1.05;margin:16px 0 8px;letter-spacing:-1px}.cover p{margin:0;color:rgba(255,255,255,.9);font-weight:600;line-height:1.45}.pill{display:inline-flex;gap:7px;align-items:center;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.27);border-radius:999px;padding:8px 12px;backdrop-filter:blur(14px);font-weight:850;font-size:13px}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:20px}.quick div{border-radius:19px;padding:11px 9px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.24)}.quick b{display:block;font-size:17px}.quick span{font-size:11px;color:rgba(255,255,255,.84)}.section{padding:10px 18px}.title{display:flex;align-items:end;justify-content:space-between;margin:10px 2px 12px}.title h2{margin:0;font-size:24px;letter-spacing:-.5px}.title span{font-size:13px;color:var(--sub);font-weight:800}.notice{background:#fff7e8;border:1px solid #ffe1ae;color:#634400;border-radius:23px;padding:15px;line-height:1.5;font-size:14px;box-shadow:var(--soft)}.tabs{display:flex;gap:9px;overflow:auto;padding:6px 18px 12px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{flex:0 0 auto;background:#fff;border:1px solid rgba(20,33,61,.06);box-shadow:var(--soft);border-radius:999px;padding:11px 15px;font-weight:900;font-size:13px;text-decoration:none;color:inherit}.day{background:rgba(255,255,255,.88);border:1px solid #fff;border-radius:30px;padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}.dayhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.dayhead h3{font-size:21px;margin:0;letter-spacing:-.4px}.badge{background:#eef6ff;color:#1769d1;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900}.optionList{display:flex;flex-direction:column;gap:12px}.option{background:#f8fafc;border:1px solid #edf2f7;border-radius:25px;padding:15px;position:relative;transition:.25s ease}.option.selected{background:linear-gradient(180deg,#eef6ff,#fff);border-color:#b9d8ff;box-shadow:0 14px 30px rgba(0,122,255,.13);order:-1}.option.selected:before{content:"선택됨";position:absolute;right:14px;top:14px;background:var(--blue);color:#fff;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:900}.option h4{margin:0 76px 6px 0;font-size:17px}.meta{color:var(--sub);font-size:13px;font-weight:650;line-height:1.45;margin:0}.timeline{margin-top:12px;display:grid;gap:8px}.slot{display:grid;grid-template-columns:58px 1fr;gap:9px;align-items:start}.time{color:var(--blue);font-size:13px;font-weight:950;padding-top:2px}.place{font-size:14px;line-height:1.45}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{font-size:11px;font-weight:850;padding:6px 8px;border-radius:999px;background:#fff;border:1px solid #e7edf5;color:#516071}.btns{display:flex;gap:8px;margin-top:13px}.btn{flex:1;border:0;border-radius:17px;padding:11px 9px;background:#eaf3ff;color:#1368d6;font-weight:950;font-size:13px;text-align:center;text-decoration:none;cursor:pointer}.btn.primary{background:var(--blue);color:#fff}.btn.gray{background:#eef0f3;color:#4b5563}.selected .btn.primary{background:#111827}.miniGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{background:#fff;border-radius:24px;padding:15px;box-shadow:var(--soft)}.mini b{display:block;margin-top:8px}.mini span{font-size:12px;color:var(--sub);line-height:1.4}.checklist{background:#fff;border-radius:28px;padding:9px 14px;box-shadow:var(--shadow)}.check{display:flex;align-items:center;gap:12px;padding:14px 4px;border-bottom:1px solid #eef2f7}.check:last-child{border-bottom:0}.check input{width:22px;height:22px;accent-color:var(--blue)}.check label{font-weight:800}.bottom{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);width:min(444px,calc(100% - 28px));background:rgba(255,255,255,.85);border:1px solid #fff;box-shadow:0 18px 50px rgba(20,33,61,.18);backdrop-filter:blur(24px);border-radius:28px;padding:9px;display:grid;grid-template-columns:repeat(4,1fr);z-index:20}.bottom a{text-align:center;border-radius:20px;padding:9px 4px;color:#6b778c;font-size:11px;font-weight:850;text-decoration:none}.bottom a b{display:block;font-size:19px}.bottom a.on{background:#eef6ff;color:#1769d1}.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);background:#111827;color:#fff;border-radius:999px;padding:12px 16px;font-weight:900;font-size:13px;opacity:0;transition:.25s;z-index:30}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}@media(min-width:700px){body{background:#e9f2fb}.app{background:var(--bg);box-shadow:0 30px 80px rgba(20,33,61,.14)}}
+</style></head><body><div class="app">
+<header class="hero" id="home"><div class="topline"><a class="back" href="../../">‹ Home</a><span class="back">선택형 플랜</span></div><div class="cover"><div class="pill">🚗 렌터카 15시 · 1박 애월 · 2박 표선</div><h1>제주 가족여행<br>애월 → 표선 3박 4일</h1><p>첫날은 애월읍 납읍로 4길 숙소, 둘째 날부터 표선권 숙소 기준으로 다시 짠 선택형 일정입니다.</p><div class="quick"><div><b>15:00</b><span>렌터카 출발</span></div><div><b>애월→표선</b><span>숙소 이동</span></div><div><b>선택형</b><span>컨디션별</span></div></div></div></header>
+<section class="section"><div class="notice"><b>사용 방법</b><br>첫날 숙소는 <b>애월읍 납읍로 4길</b>, 둘째 날부터는 <b>표선권 숙소</b> 기준입니다. 각 선택지에서 <b>이 플랜 선택</b>을 누르면 해당 일정이 맨 위로 올라갑니다.</div></section>
+<nav class="tabs" id="options"><a class="tab" href="#day1">Day 1</a><a class="tab" href="#day2">Day 2</a><a class="tab" href="#day3">Day 3</a><a class="tab" href="#day4">Day 4</a><a class="tab" href="#checklist">준비물</a></nav>
+<section class="section">
+<article class="day" id="day1" data-day="day1"><div class="dayhead"><h3>✈️ Day 1 · 애월 체크인</h3><span class="badge">애월 숙소</span></div><div class="optionList">
+<div class="option" data-option="day1-aewol-rest"><h4>A안 · 애월 숙소 바로 체크인 + 근처 산책</h4><p class="meta">가장 추천. 렌터카를 15시에 찾는다면 첫날은 애월읍 납읍로 4길 숙소 주변에서 가볍게 마무리하는 게 안전합니다.</p><div class="timeline"><div class="slot"><div class="time">15:00</div><div class="place">렌터카 인수 후 애월 숙소로 이동</div></div><div class="slot"><div class="time">15:50</div><div class="place">애월읍 납읍로 4길 숙소 체크인 · 수유 · 짐 정리</div></div><div class="slot"><div class="time">17:00</div><div class="place">숙소 근처 산책 또는 가까운 카페 30~40분</div></div><div class="slot"><div class="time">18:00</div><div class="place">애월 근처 저녁/포장 후 숙소 식사</div></div></div><div class="chips"><span class="chip">피로도 최저</span><span class="chip">4개월 아기 추천</span><span class="chip">첫날 추천</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/제주%20애월읍%20납읍로%204길">숙소 주변</a></div></div>
+<div class="option" data-option="day1-aewol-beach"><h4>B안 · 곽지/한담 바다 짧게 보고 숙소</h4><p class="meta">아이 컨디션이 좋고 날씨가 괜찮을 때. 오래 걷지 말고 바다만 짧게 보는 코스입니다.</p><div class="timeline"><div class="slot"><div class="time">15:00</div><div class="place">렌터카 인수</div></div><div class="slot"><div class="time">15:50</div><div class="place">곽지해수욕장 또는 한담해안산책로 짧게 산책</div></div><div class="slot"><div class="time">17:00</div><div class="place">애월 숙소 체크인</div></div><div class="slot"><div class="time">18:00</div><div class="place">저녁은 애월 근처에서 가볍게</div></div></div><div class="chips"><span class="chip">바다</span><span class="chip">사진</span><span class="chip">컨디션 좋을 때</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/곽지해수욕장">곽지</a><a class="btn" target="_blank" href="https://map.naver.com/p/search/한담해안산책로">한담</a></div></div>
+<div class="option" data-option="day1-aewol-dinner"><h4>C안 · 애월 맛집/마트 먼저 해결</h4><p class="meta">아기 짐이 많거나 숙소에서 먹는 게 편할 때. 장보기와 저녁을 먼저 해결하고 바로 쉬는 플랜입니다.</p><div class="timeline"><div class="slot"><div class="time">15:00</div><div class="place">렌터카 인수 후 애월 이동</div></div><div class="slot"><div class="time">15:50</div><div class="place">숙소 체크인 전후 마트/편의점/포장 음식 준비</div></div><div class="slot"><div class="time">17:30</div><div class="place">숙소에서 저녁 · 아이들 목욕 · 일찍 취침</div></div></div><div class="chips"><span class="chip">부모 체력 보존</span><span class="chip">숙소 식사</span><span class="chip">일찍 취침</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/애월%20마트">마트</a><a class="btn" target="_blank" href="https://map.naver.com/p/search/애월%20포장%20맛집">포장</a></div></div>
+</div></article>
+<article class="day" id="day2" data-day="day2"><div class="dayhead"><h3>🐠 Day 2 · 애월 → 표선 이동일</h3><span class="badge">숙소 이동</span></div><div class="optionList">
+<div class="option" data-option="day2-aqua"><h4>A안 · 애월 출발 → 아쿠아플라넷 → 표선 체크인</h4><p class="meta">애월에서 표선으로 이동하면서 성산권 메인 관광을 넣는 플랜입니다. 5살 만족도는 가장 높습니다.</p><div class="timeline"><div class="slot"><div class="time">09:30</div><div class="place">애월 숙소 체크아웃 후 출발</div></div><div class="slot"><div class="time">10:40</div><div class="place">아쿠아플라넷 제주</div></div><div class="slot"><div class="time">12:30</div><div class="place">성산 근처 점심</div></div><div class="slot"><div class="time">14:00</div><div class="place">섭지코지 짧은 산책</div></div><div class="slot"><div class="time">16:00</div><div class="place">표선 숙소 체크인 · 낮잠</div></div></div><div class="chips"><span class="chip">비 와도 가능</span><span class="chip">아이 만족도 높음</span><span class="chip">동선 좋음</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/아쿠아플라넷%20제주">지도</a></div></div>
+<div class="option" data-option="day2-snoopy"><h4>B안 · 애월 출발 → 스누피가든 → 표선 체크인</h4><p class="meta">동쪽으로 넘어가는 길에 스누피가든을 메인으로 넣는 코스입니다. 야외 구간은 날씨 확인.</p><div class="timeline"><div class="slot"><div class="time">09:30</div><div class="place">애월 숙소 체크아웃 후 출발</div></div><div class="slot"><div class="time">10:40</div><div class="place">스누피가든 실내 전시</div></div><div class="slot"><div class="time">11:30</div><div class="place">야외 정원 산책</div></div><div class="slot"><div class="time">13:00</div><div class="place">근처 점심/카페</div></div><div class="slot"><div class="time">15:30</div><div class="place">표선 숙소 체크인</div></div></div><div class="chips"><span class="chip">사진</span><span class="chip">유모차</span><span class="chip">날씨 좋을 때</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/스누피가든">지도</a></div></div>
+<div class="option" data-option="day2-light"><h4>C안 · 애월 출발 → 표선 바로 이동 + 근처만</h4><p class="meta">아이 컨디션이 안 좋거나 이동 피로가 크면 관광을 줄이고 표선 숙소로 바로 넘어갑니다.</p><div class="timeline"><div class="slot"><div class="time">09:30</div><div class="place">애월 숙소 체크아웃 후 표선으로 이동</div></div><div class="slot"><div class="time">11:00</div><div class="place">제주민속촌 또는 표선해변</div></div><div class="slot"><div class="time">12:00</div><div class="place">숙소 근처 점심</div></div><div class="slot"><div class="time">14:00</div><div class="place">숙소 낮잠 · 오후 산책</div></div></div><div class="chips"><span class="chip">체력 보존</span><span class="chip">숙소 가까움</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/제주민속촌">지도</a></div></div>
+</div></article>
+<article class="day" id="day3" data-day="day3"><div class="dayhead"><h3>🌿 Day 3 · 선택형 휴식일</h3><span class="badge">컨디션별</span></div><div class="optionList">
+<div class="option" data-option="day3-snoopy"><h4>A안 · 스누피가든 메인</h4><p class="meta">Day 2에 아쿠아플라넷을 갔다면 Day 3는 스누피가든이 가장 무난합니다.</p><div class="timeline"><div class="slot"><div class="time">09:30</div><div class="place">스누피가든</div></div><div class="slot"><div class="time">13:00</div><div class="place">점심 + 카페</div></div><div class="slot"><div class="time">15:30</div><div class="place">숙소 복귀/표선해변</div></div></div><div class="chips"><span class="chip">가족 사진</span><span class="chip">5살 추천</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/스누피가든">지도</a></div></div>
+<div class="option" data-option="day3-forest"><h4>B안 · 사려니숲길 + 조용한 카페</h4><p class="meta">부모 힐링 중심. 5살 아이가 걷는 걸 좋아하면 좋지만 오래 걷지는 않기.</p><div class="timeline"><div class="slot"><div class="time">09:40</div><div class="place">사려니숲길 짧은 산책</div></div><div class="slot"><div class="time">11:30</div><div class="place">조천/표선 방향 점심</div></div><div class="slot"><div class="time">14:00</div><div class="place">카페 후 숙소 복귀</div></div></div><div class="chips"><span class="chip">부모 힐링</span><span class="chip">그늘</span><span class="chip">걷기 짧게</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/사려니숲길">지도</a></div></div>
+<div class="option" data-option="day3-indoor"><h4>C안 · 비오는 날 실내 대체</h4><p class="meta">비가 오거나 바람이 강하면 실내 위주. 이동은 조금 늘어날 수 있습니다.</p><div class="timeline"><div class="slot"><div class="time">10:00</div><div class="place">아르떼뮤지엄 또는 아쿠아플라넷 재선택</div></div><div class="slot"><div class="time">13:00</div><div class="place">점심</div></div><div class="slot"><div class="time">15:30</div><div class="place">숙소 복귀</div></div></div><div class="chips"><span class="chip">비오는 날</span><span class="chip">실내</span><span class="chip">부모 만족</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/아르떼뮤지엄%20제주">지도</a></div></div>
+<div class="option" data-option="day3-animal"><h4>D안 · 동물/체험 코스</h4><p class="meta">5살 아이 에너지 소진용. 야외 위주라 더운 시간은 피하기.</p><div class="timeline"><div class="slot"><div class="time">09:30</div><div class="place">동물 체험/목장형 관광지</div></div><div class="slot"><div class="time">12:30</div><div class="place">점심</div></div><div class="slot"><div class="time">15:00</div><div class="place">숙소 복귀</div></div></div><div class="chips"><span class="chip">5살 에너지</span><span class="chip">야외</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/제주%20아이와%20동물">검색</a></div></div>
+</div></article>
+<article class="day" id="day4" data-day="day4"><div class="dayhead"><h3>🛫 Day 4 · 출발일</h3><span class="badge">11시 비행기</span></div><div class="optionList">
+<div class="option" data-option="day4-direct"><h4>A안 · 바로 공항 이동</h4><p class="meta">가장 안전한 선택. 렌터카 반납과 주말 공항 혼잡을 고려.</p><div class="timeline"><div class="slot"><div class="time">07:00</div><div class="place">체크아웃 준비/수유/짐 정리</div></div><div class="slot"><div class="time">08:00</div><div class="place">표선 출발</div></div><div class="slot"><div class="time">09:20</div><div class="place">렌터카 반납</div></div><div class="slot"><div class="time">11:00</div><div class="place">제주 출발</div></div></div><div class="chips"><span class="chip">추천</span><span class="chip">리스크 최소</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/제주공항">공항</a></div></div>
+<div class="option" data-option="day4-breakfast"><h4>B안 · 공항 근처 아침</h4><p class="meta">짐 정리가 빨리 끝나고 아이 컨디션이 좋을 때만.</p><div class="timeline"><div class="slot"><div class="time">07:30</div><div class="place">표선 출발</div></div><div class="slot"><div class="time">08:40</div><div class="place">공항 근처 아침/카페</div></div><div class="slot"><div class="time">09:40</div><div class="place">렌터카 반납</div></div></div><div class="chips"><span class="chip">여유 있을 때만</span><span class="chip">위험도 중간</span></div><div class="btns"><button class="btn primary selectBtn">이 플랜 선택</button><a class="btn" target="_blank" href="https://map.naver.com/p/search/제주공항%20아침식사">검색</a></div></div>
+</div></article>
+</section>
+<section class="section" id="checklist"><div class="title"><h2>준비물 체크</h2><span>체크 저장됨</span></div><div class="checklist"><div class="check"><input type="checkbox" id="ck0"><label for="ck0">기저귀 충분히</label></div><div class="check"><input type="checkbox" id="ck1"><label for="ck1">분유/젖병/보온병</label></div><div class="check"><input type="checkbox" id="ck2"><label for="ck2">아기띠와 유모차</label></div><div class="check"><input type="checkbox" id="ck3"><label for="ck3">카시트 확인</label></div><div class="check"><input type="checkbox" id="ck4"><label for="ck4">여벌 옷 2세트 이상</label></div><div class="check"><input type="checkbox" id="ck5"><label for="ck5">모래놀이 장난감</label></div><div class="check"><input type="checkbox" id="ck6"><label for="ck6">선크림/모자</label></div><div class="check"><input type="checkbox" id="ck7"><label for="ck7">상비약/체온계</label></div><div class="check"><input type="checkbox" id="ck8"><label for="ck8">충전기/보조배터리</label></div><div class="check"><input type="checkbox" id="ck9"><label for="ck9">비닐봉투/물티슈</label></div></div></section>
+<section class="section"><div class="title"><h2>컨디션별 빠른 선택</h2><span>당일 결정용</span></div><div class="miniGrid"><div class="mini">👶<b>아기가 힘들면</b><span>표선해변 + 숙소 휴식 + 포장식</span></div><div class="mini">🧒<b>5살이 심심하면</b><span>아쿠아플라넷 또는 스누피가든</span></div><div class="mini">☔<b>비가 오면</b><span>아쿠아플라넷, 제주민속촌, 실내 카페</span></div><div class="mini">🌤️<b>날씨 좋으면</b><span>섭지코지, 표선해변, 사려니숲길</span></div></div></section>
+<div class="toast" id="toast">선택한 플랜을 맨 위로 올렸어요</div><nav class="bottom"><a class="on" href="#home"><b>🏠</b>Top</a><a href="#options"><b>✨</b>Options</a><a href="#checklist"><b>☑️</b>Todo</a><a href="../../"><b>↩️</b>Home</a></nav>
 <script>
-const checks=[...document.querySelectorAll('input[type="checkbox"]')];
-checks.forEach(c=>{c.checked=localStorage.getItem(c.id)==='1';c.addEventListener('change',()=>localStorage.setItem(c.id,c.checked?'1':'0'));});
-const tabs=[...document.querySelectorAll('.tab')];
-tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active')}));
-const nav=[...document.querySelectorAll('.bottom-nav a')];
-nav.forEach(n=>n.addEventListener('click',()=>{nav.forEach(x=>x.classList.remove('on'));n.classList.add('on')}));
-</script>
-</body>
-</html>
+const toast=document.getElementById('toast');function showToast(){toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1600)}
+function applySelected(dayEl,optId){dayEl.querySelectorAll('.option').forEach(o=>o.classList.toggle('selected',o.dataset.option===optId));}
+document.querySelectorAll('.day').forEach(day=>{const dayKey=day.dataset.day;const saved=localStorage.getItem('jeju-selected-'+dayKey);if(saved) applySelected(day,saved);day.querySelectorAll('.selectBtn').forEach(btn=>{btn.addEventListener('click',()=>{const opt=btn.closest('.option');localStorage.setItem('jeju-selected-'+dayKey,opt.dataset.option);applySelected(day,opt.dataset.option);opt.scrollIntoView({behavior:'smooth',block:'center'});showToast();});});});
+document.querySelectorAll('.check input').forEach(input=>{const key='jeju-check-'+input.id;input.checked=localStorage.getItem(key)==='1';input.addEventListener('change',()=>localStorage.setItem(key,input.checked?'1':'0'));});
+</script></div></body></html>
